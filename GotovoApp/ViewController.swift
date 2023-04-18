@@ -10,47 +10,81 @@ import WebKit
 
 class ViewController: UIViewController {
 
-    let webView: WKWebView = {
-        let preferences = WKWebpagePreferences()
-        preferences.allowsContentJavaScript = true
-        let configuration = WKWebViewConfiguration()
-        configuration.defaultWebpagePreferences = preferences
-        let webView = WKWebView(frame: .zero, configuration: configuration)
-        webView.translatesAutoresizingMaskIntoConstraints = false
+    private let webView =  WKWebView() => {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
 
+    private lazy var navigationStackView = UIStackView() => {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.axis = .horizontal
+        $0.alignment = .fill
+        $0.distribution = .fillEqually
+        $0.spacing = 10
+    }
 
-        return webView
-    }()
+    private lazy var backButton = UIButton(frame: .zero) => {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setImage(UIImage(systemName: "arrowshape.left"), for: .normal)
+        $0.addTarget(self, action: #selector(backAction), for: .touchUpInside)
+    }
+
+    private lazy var refreshButton = UIButton() => {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
+        $0.addTarget(self, action: #selector(refreshAction), for: .touchUpInside)
+    }
+
+    private lazy var forwardButton = UIButton() => {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.setImage(UIImage(systemName: "arrowshape.right"), for: .normal)
+        $0.addTarget(self, action: #selector(forwardAction), for: .touchUpInside)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setConstraints()
+        setupViews()
 
-        guard let url = URL(string: "https://gotovo-staging.fly.dev/") else { return }
+        guard let url = URL(string: "https://gotovo.app") else { return }
         webView.load(URLRequest(url: url))
+    }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.webView.evaluateJavaScript("document.body.innerHTML") { result, error in
-                guard let html = result as? String, error == nil else {
-                    return
-                }
+    private func setupViews() {
+        view.addSubview(webView)
+        view.addSubview(navigationStackView)
 
-                print(html)
-            }
-        }
+        [backButton, refreshButton, forwardButton].forEach { navigationStackView.addArrangedSubview($0) }
+
+        setConstraints()
     }
 
     private func setConstraints() {
-        view.addSubview(webView)
-
         NSLayoutConstraint.activate([
             webView.topAnchor.constraint(equalTo: view.topAnchor),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            webView.bottomAnchor.constraint(equalTo: navigationStackView.topAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            navigationStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            navigationStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            navigationStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            navigationStackView.heightAnchor.constraint(equalToConstant: 64)
         ])
     }
 
+    //MARK: - Actions -
+    @objc private func backAction() {
+        webView.goBack()
+    }
+
+    @objc private func refreshAction() {
+        webView.reload()
+    }
+
+    @objc private func forwardAction() {
+        webView.goForward()
+    }
 }
 
