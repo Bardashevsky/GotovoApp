@@ -13,7 +13,16 @@ class ViewController: UIViewController {
     private let testURL = "https://gotovo-staging.fly.dev/"
     private let prodURL = "https://gotovo.app"
 
-    private let webView =  WKWebView() => {
+    private let webConfiguration = WKWebViewConfiguration() => {
+        $0.ignoresViewportScaleLimits = true
+        $0.suppressesIncrementalRendering = true
+        $0.allowsInlineMediaPlayback = true
+        $0.allowsAirPlayForMediaPlayback = false
+        $0.allowsPictureInPictureMediaPlayback = true
+        $0.mediaTypesRequiringUserActionForPlayback = .all
+    }
+
+    private lazy var webView =  WKWebView(frame: .zero, configuration: webConfiguration) => {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
 
