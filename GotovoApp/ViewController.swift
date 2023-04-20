@@ -11,6 +11,7 @@ import WebKit
 class ViewController: UIViewController {
 
     private let testURL = "https://gotovo-staging.fly.dev/"
+    private let test2URL = "https://83b2-91-214-138-236.ngrok-free.app/"
     private let prodURL = "https://gotovo.app"
 
     private let webConfiguration = WKWebViewConfiguration() => {
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
         
         setupViews()
 
-        guard let url = URL(string: testURL) else { return }
+        guard let url = URL(string: test2URL) else { return }
         self.webView.load(URLRequest(url: url))
     }
 
