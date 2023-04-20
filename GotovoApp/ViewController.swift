@@ -10,6 +10,9 @@ import WebKit
 
 class ViewController: UIViewController {
 
+    private let testURL = "https://gotovo-staging.fly.dev/"
+    private let prodURL = "https://gotovo.app"
+
     private let webView =  WKWebView() => {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -45,8 +48,8 @@ class ViewController: UIViewController {
         
         setupViews()
 
-        guard let url = URL(string: "https://gotovo.app") else { return }
-        webView.load(URLRequest(url: url))
+        guard let url = URL(string: testURL) else { return }
+        self.webView.load(URLRequest(url: url))
     }
 
     private func setupViews() {
