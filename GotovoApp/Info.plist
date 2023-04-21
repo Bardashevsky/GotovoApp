@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Used to QR-Scanner and profile avatar</string>
+	<string>$(PRODUCT_NAME) Used to QR-Scanner and profile avatar</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
