@@ -25,6 +25,8 @@ class ViewController: UIViewController {
 
     private lazy var webView =  WKWebView(frame: .zero, configuration: webConfiguration) => {
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.navigationDelegate = self
+        $0.uiDelegate = self
     }
 
     private lazy var navigationStackView = UIStackView() => {
@@ -58,7 +60,7 @@ class ViewController: UIViewController {
         
         setupViews()
 
-        guard let url = URL(string: test2URL) else { return }
+        guard let url = URL(string: prodURL) else { return }
         self.webView.load(URLRequest(url: url))
     }
 
@@ -98,6 +100,27 @@ class ViewController: UIViewController {
 
     @objc private func forwardAction() {
         webView.goForward()
+    }
+}
+
+extension ViewController: WKNavigationDelegate {
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let url = navigationAction.request.url,
+           url.scheme == "tel" {
+            UIApplication.shared.open(url)
+        }
+        decisionHandler(.allow)
+    }
+}
+
+extension ViewController: WKUIDelegate {
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if navigationAction.request.url?.host?.contains("telegram") == true {
+            webView.load(navigationAction.request)
+        }
+        return nil
     }
 }
 
