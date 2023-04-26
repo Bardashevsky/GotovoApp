@@ -123,4 +123,3 @@ extension ViewController: WKUIDelegate {
         return nil
     }
 }
-
