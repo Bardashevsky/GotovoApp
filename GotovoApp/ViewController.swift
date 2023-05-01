@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     private let testURL = "https://gotovo-staging.fly.dev/"
     private let test2URL = "https://83b2-91-214-138-236.ngrok-free.app/"
-    private let prodURL = "https://gotovo.app"
+    private let prodURL = "https://gotovo.app/"
 
     private let webConfiguration = WKWebViewConfiguration() => {
         $0.ignoresViewportScaleLimits = true
@@ -74,8 +74,10 @@ class ViewController: UIViewController {
     }
 
     private func setConstraints() {
+        let margins = view.layoutMarginsGuide
+
         NSLayoutConstraint.activate([
-            webView.topAnchor.constraint(equalTo: view.topAnchor),
+            webView.topAnchor.constraint(equalTo: margins.topAnchor),
             webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             webView.bottomAnchor.constraint(equalTo: navigationStackView.topAnchor)
@@ -85,7 +87,7 @@ class ViewController: UIViewController {
             navigationStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             navigationStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
             navigationStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            navigationStackView.heightAnchor.constraint(equalToConstant: 64)
+            navigationStackView.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
 
