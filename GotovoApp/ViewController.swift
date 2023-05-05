@@ -85,7 +85,7 @@ class ViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             navigationStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            navigationStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
+            navigationStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             navigationStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             navigationStackView.heightAnchor.constraint(equalToConstant: 44)
         ])
