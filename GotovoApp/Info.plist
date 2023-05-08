@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) Used your location for route and delivery</string>
+	<string>$(PRODUCT_NAME) Ваша геолокація потрібна для того, щоб показати заклади поблизу або для побудови маршруту від Вашого місцезнаходження</string>
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) Used to QR-Scanner and profile avatar</string>
 	<key>UIApplicationSceneManifest</key>
