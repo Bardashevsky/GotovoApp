@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) Ваша геолокація потрібна для того, щоб показати заклади поблизу або для побудови маршруту від Вашого місцезнаходження</string>
+	<string>$(PRODUCT_NAME) Використувує Вашу локацію для того, щоб показати заклади поблизу або щоб побудувати маршрут від Вашого місцезнаходження</string>
 	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) Used to QR-Scanner and profile avatar</string>
+	<string>$(PRODUCT_NAME) Використовує вашу камеру для сканування QR кодів та додавання аватару профіля</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
