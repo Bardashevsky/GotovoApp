@@ -39,19 +39,25 @@ class ViewController: UIViewController {
 
     private lazy var backButton = UIButton(frame: .zero) => {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage(systemName: "arrowshape.left"), for: .normal)
+        $0.setImage(UIImage(named: "back"), for: .normal)
+        $0.imageView?.contentMode = .scaleAspectFit
+        $0.imageEdgeInsets = .init(top: 10, left: 10, bottom: 10, right: 10)
         $0.addTarget(self, action: #selector(backAction), for: .touchUpInside)
     }
 
     private lazy var refreshButton = UIButton() => {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
+        $0.setImage(UIImage(named: "refresh"), for: .normal)
+        $0.imageView?.contentMode = .scaleAspectFit
+        $0.imageEdgeInsets = .init(top: 5, left: 5, bottom: 5, right: 5)
         $0.addTarget(self, action: #selector(refreshAction), for: .touchUpInside)
     }
 
     private lazy var forwardButton = UIButton() => {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage(systemName: "arrowshape.right"), for: .normal)
+        $0.setImage(UIImage(named: "forward"), for: .normal)
+        $0.imageView?.contentMode = .scaleAspectFit
+        $0.imageEdgeInsets = .init(top: 10, left: 10, bottom: 10, right: 10)
         $0.addTarget(self, action: #selector(forwardAction), for: .touchUpInside)
     }
 
@@ -87,7 +93,7 @@ class ViewController: UIViewController {
             navigationStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             navigationStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             navigationStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            navigationStackView.heightAnchor.constraint(equalToConstant: 44)
+            navigationStackView.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 
@@ -97,6 +103,8 @@ class ViewController: UIViewController {
     }
 
     @objc private func refreshAction() {
+        navigationStackView.isUserInteractionEnabled = false
+        refreshButton.rotate()
         webView.reload()
     }
 
@@ -106,6 +114,16 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: WKNavigationDelegate {
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        refreshButton.layer.removeAllAnimations()
+        navigationStackView.isUserInteractionEnabled = true
+    }
+
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        refreshButton.layer.removeAllAnimations()
+        navigationStackView.isUserInteractionEnabled = true
+    }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let url = navigationAction.request.url,
