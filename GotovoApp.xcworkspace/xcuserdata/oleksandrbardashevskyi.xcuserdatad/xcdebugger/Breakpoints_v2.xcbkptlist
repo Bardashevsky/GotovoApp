@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "44FF0DE9-F505-4CA3-B0BE-96C1C59ADEAA"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3002A09D-B78A-43AE-9691-F34C39E93BA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GotovoApp/Extensions/UIImage+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "setSVG(by:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51EFE31E-CC95-40F3-9359-846EF55FC44A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GotovoApp/Extensions/UIImage+SVG+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setSVG(by:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "51EFE31E-CC95-40F3-9359-846EF55FC44A - cafdb62b655de3cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static __C.UIImage.setSVG(by: Swift.String) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "GotovoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/Extensions/UIImage+SVG+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "51EFE31E-CC95-40F3-9359-846EF55FC44A - cafdb62b655de3cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static __C.UIImage.setSVG(by: Swift.String) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "GotovoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/Extensions/UIImage+SVG+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

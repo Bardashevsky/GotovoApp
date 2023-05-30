@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 
     private lazy var backButton = UIButton(frame: .zero) => {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage(named: "back"), for: .normal)
+        $0.setImage(UIImage.setSVG(by: SVG.left.path), for: .normal)
         $0.imageView?.contentMode = .scaleAspectFit
         $0.imageEdgeInsets = .init(top: 10, left: 10, bottom: 10, right: 10)
         $0.addTarget(self, action: #selector(backAction), for: .touchUpInside)
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
     private lazy var refreshButton = UIButton() => {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage(named: "refresh"), for: .normal)
+        $0.setImage(UIImage.setSVG(by: SVG.refresh.path), for: .normal)
         $0.imageView?.contentMode = .scaleAspectFit
         $0.imageEdgeInsets = .init(top: 5, left: 5, bottom: 5, right: 5)
         $0.addTarget(self, action: #selector(refreshAction), for: .touchUpInside)
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
 
     private lazy var forwardButton = UIButton() => {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage(named: "forward"), for: .normal)
+        $0.setImage(UIImage.setSVG(by: SVG.right.path), for: .normal)
         $0.imageView?.contentMode = .scaleAspectFit
         $0.imageEdgeInsets = .init(top: 10, left: 10, bottom: 10, right: 10)
         $0.addTarget(self, action: #selector(forwardAction), for: .touchUpInside)

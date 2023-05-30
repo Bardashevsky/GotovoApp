@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4F12405A29EEB40800098726 /* NBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12405929EEB40800098726 /* NBInit.swift */; };
-		4FBA5BE72A14D42200BB188F /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA5BE62A14D42200BB188F /* UIView + Extension.swift */; };
+		4F304F812A2616E20051CD1F /* svg in Resources */ = {isa = PBXBuildFile; fileRef = 4F304F802A2616E20051CD1F /* svg */; };
+		4F304F832A26182A0051CD1F /* UIImage+SVG+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F304F822A26182A0051CD1F /* UIImage+SVG+Extension.swift */; };
+		4FBA5BE72A14D42200BB188F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA5BE62A14D42200BB188F /* UIView+Extension.swift */; };
 		4FE75F7D29E0197B00EED728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE75F7C29E0197B00EED728 /* AppDelegate.swift */; };
 		4FE75F7F29E0197B00EED728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE75F7E29E0197B00EED728 /* SceneDelegate.swift */; };
 		4FE75F8129E0197B00EED728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE75F8029E0197B00EED728 /* ViewController.swift */; };
 		4FE75F8429E0197B00EED728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE75F8229E0197B00EED728 /* Main.storyboard */; };
 		4FE75F8629E0197C00EED728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE75F8529E0197C00EED728 /* Assets.xcassets */; };
 		4FE75F8929E0197C00EED728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE75F8729E0197C00EED728 /* LaunchScreen.storyboard */; };
+		626B6B33A0388087D4BCC3E9 /* Pods_GotovoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970B05996D81812A54A07372 /* Pods_GotovoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4F12405929EEB40800098726 /* NBInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBInit.swift; sourceTree = "<group>"; };
-		4FBA5BE62A14D42200BB188F /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		4F304F7C2A2614BB0051CD1F /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F304F802A2616E20051CD1F /* svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = svg; path = GotovoApp/svg; sourceTree = SOURCE_ROOT; };
+		4F304F822A26182A0051CD1F /* UIImage+SVG+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SVG+Extension.swift"; sourceTree = "<group>"; };
+		4FBA5BE62A14D42200BB188F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4FE75F7929E0197B00EED728 /* GotovoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GotovoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE75F7C29E0197B00EED728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FE75F7E29E0197B00EED728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +34,9 @@
 		4FE75F8529E0197C00EED728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE75F8829E0197C00EED728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE75F8A29E0197C00EED728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9A3E1CC5BCB5D48A6E48CE /* Pods-GotovoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotovoApp.release.xcconfig"; path = "Target Support Files/Pods-GotovoApp/Pods-GotovoApp.release.xcconfig"; sourceTree = "<group>"; };
+		86ED6DC1EC9616042545DF70 /* Pods-GotovoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotovoApp.debug.xcconfig"; path = "Target Support Files/Pods-GotovoApp/Pods-GotovoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		970B05996D81812A54A07372 /* Pods_GotovoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GotovoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626B6B33A0388087D4BCC3E9 /* Pods_GotovoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				4F12405929EEB40800098726 /* NBInit.swift */,
-				4FBA5BE62A14D42200BB188F /* UIView + Extension.swift */,
+				4FBA5BE62A14D42200BB188F /* UIView+Extension.swift */,
+				4F304F822A26182A0051CD1F /* UIImage+SVG+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -55,6 +66,8 @@
 			children = (
 				4FE75F7B29E0197B00EED728 /* GotovoApp */,
 				4FE75F7A29E0197B00EED728 /* Products */,
+				5F5A0DA3E764C0EE908A6E5F /* Pods */,
+				788E9BD8D08D7F075E2D3BA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,10 +88,29 @@
 				4FE75F8029E0197B00EED728 /* ViewController.swift */,
 				4FE75F8229E0197B00EED728 /* Main.storyboard */,
 				4FE75F8529E0197C00EED728 /* Assets.xcassets */,
+				4F304F802A2616E20051CD1F /* svg */,
 				4FE75F8729E0197C00EED728 /* LaunchScreen.storyboard */,
 				4FE75F8A29E0197C00EED728 /* Info.plist */,
 			);
 			path = GotovoApp;
+			sourceTree = "<group>";
+		};
+		5F5A0DA3E764C0EE908A6E5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86ED6DC1EC9616042545DF70 /* Pods-GotovoApp.debug.xcconfig */,
+				5A9A3E1CC5BCB5D48A6E48CE /* Pods-GotovoApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		788E9BD8D08D7F075E2D3BA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F304F7C2A2614BB0051CD1F /* SVGKit.framework */,
+				970B05996D81812A54A07372 /* Pods_GotovoApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FE75F8D29E0197C00EED728 /* Build configuration list for PBXNativeTarget "GotovoApp" */;
 			buildPhases = (
+				EC16C8A5182C1179180D4D3D /* [CP] Check Pods Manifest.lock */,
 				4FE75F7529E0197B00EED728 /* Sources */,
 				4FE75F7629E0197B00EED728 /* Frameworks */,
 				4FE75F7729E0197B00EED728 /* Resources */,
+				64DCCE74A421C5D78B142C70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F304F812A2616E20051CD1F /* svg in Resources */,
 				4FE75F8929E0197C00EED728 /* LaunchScreen.storyboard in Resources */,
 				4FE75F8629E0197C00EED728 /* Assets.xcassets in Resources */,
 				4FE75F8429E0197B00EED728 /* Main.storyboard in Resources */,
@@ -147,15 +182,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		64DCCE74A421C5D78B142C70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GotovoApp/Pods-GotovoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GotovoApp/Pods-GotovoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GotovoApp/Pods-GotovoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC16C8A5182C1179180D4D3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GotovoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FE75F7529E0197B00EED728 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4FE75F8129E0197B00EED728 /* ViewController.swift in Sources */,
+				4F304F832A26182A0051CD1F /* UIImage+SVG+Extension.swift in Sources */,
 				4FE75F7D29E0197B00EED728 /* AppDelegate.swift in Sources */,
 				4FE75F7F29E0197B00EED728 /* SceneDelegate.swift in Sources */,
-				4FBA5BE72A14D42200BB188F /* UIView + Extension.swift in Sources */,
+				4FBA5BE72A14D42200BB188F /* UIView+Extension.swift in Sources */,
 				4F12405A29EEB40800098726 /* NBInit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +376,7 @@
 		};
 		4FE75F8E29E0197C00EED728 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86ED6DC1EC9616042545DF70 /* Pods-GotovoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +412,7 @@
 		};
 		4FE75F8F29E0197C00EED728 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A9A3E1CC5BCB5D48A6E48CE /* Pods-GotovoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
