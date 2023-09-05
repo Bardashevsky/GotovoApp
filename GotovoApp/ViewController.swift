@@ -66,7 +66,7 @@ class ViewController: UIViewController {
 
         setupViews()
 
-        guard let url = URL(string: prodURL) else { return }
+        guard let url = URL(string: test2URL) else { return }
         webView.load(URLRequest(url: url))
     }
 
