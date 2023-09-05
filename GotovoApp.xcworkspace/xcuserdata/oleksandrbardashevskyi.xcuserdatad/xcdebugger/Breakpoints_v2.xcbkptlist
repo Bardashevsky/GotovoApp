@@ -23,47 +23,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "51EFE31E-CC95-40F3-9359-846EF55FC44A"
+            uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GotovoApp/Extensions/UIImage+SVG+Extension.swift"
+            filePath = "GotovoApp/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "setSVG(by:)"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "51EFE31E-CC95-40F3-9359-846EF55FC44A - cafdb62b655de3cb"
+                  uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9 - 66c3afb2d0ee65d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static __C.UIImage.setSVG(by: Swift.String) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  symbolName = "GotovoApp.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationAction, decisionHandler: (__C.WKNavigationActionPolicy) -&gt; ()) -&gt; ()"
                   moduleName = "GotovoApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/Extensions/UIImage+SVG+Extension.swift"
+                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "92">
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "2504">
                </Location>
                <Location
-                  uuid = "51EFE31E-CC95-40F3-9359-846EF55FC44A - cafdb62b655de3cb"
+                  uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9 - 66c3afb2d0ee65d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static __C.UIImage.setSVG(by: Swift.String) -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  symbolName = "GotovoApp.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationAction, decisionHandler: (__C.WKNavigationActionPolicy) -&gt; ()) -&gt; ()"
                   moduleName = "GotovoApp"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/Extensions/UIImage+SVG+Extension.swift"
+                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "268">
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "3188">
                </Location>
             </Locations>
          </BreakpointContent>
