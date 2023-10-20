@@ -44,14 +44,14 @@ class ViewController: UIViewController {
 //        $0.addTarget(self, action: #selector(backAction), for: .touchUpInside)
 //    }
 
-    private lazy var refreshButton = UIButton() => {
-        $0.isHidden = true
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setImage(UIImage.setSVG(by: SVG.refresh.path), for: .normal)
-        $0.imageView?.contentMode = .scaleAspectFill
-        $0.imageEdgeInsets = .init(top: 5, left: 5, bottom: 5, right: 5)
-        $0.addTarget(self, action: #selector(refreshAction), for: .touchUpInside)
-    }
+//    private lazy var refreshButton = UIButton() => {
+//        $0.isHidden = true
+//        $0.translatesAutoresizingMaskIntoConstraints = false
+//        $0.setImage(UIImage.setSVG(by: SVG.refresh.path), for: .normal)
+//        $0.imageView?.contentMode = .scaleAspectFill
+//        $0.imageEdgeInsets = .init(top: 5, left: 5, bottom: 5, right: 5)
+//        $0.addTarget(self, action: #selector(refreshAction), for: .touchUpInside)
+//    }
 
 //    private lazy var forwardButton = UIButton() => {
 //        $0.translatesAutoresizingMaskIntoConstraints = false
@@ -66,13 +66,19 @@ class ViewController: UIViewController {
 
         setupViews()
 
-        guard let url = URL(string: test2URL) else { return }
+        guard let url = URL(string: prodURL) else { return }
         webView.load(URLRequest(url: url))
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(appDidBecomeActive),
+                                               name: UIApplication.didBecomeActiveNotification,
+                                               object: nil)
     }
+
 
     private func setupViews() {
         view.addSubview(webView)
-        view.addSubview(refreshButton)
+//        view.addSubview(refreshButton)
 
 //        [backButton, refreshButton, forwardButton].forEach { navigationStackView.addArrangedSubview($0) }
 
@@ -89,12 +95,12 @@ class ViewController: UIViewController {
             webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
 
-        NSLayoutConstraint.activate([
-            refreshButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            refreshButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            refreshButton.widthAnchor.constraint(equalToConstant: 64),
-            refreshButton.heightAnchor.constraint(equalToConstant: 64),
-        ])
+//        NSLayoutConstraint.activate([
+//            refreshButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            refreshButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+//            refreshButton.widthAnchor.constraint(equalToConstant: 64),
+//            refreshButton.heightAnchor.constraint(equalToConstant: 64),
+//        ])
     }
 
     // MARK: - Actions -
@@ -103,29 +109,33 @@ class ViewController: UIViewController {
 //        webView.goBack()
 //    }
 //
-    @objc private func refreshAction() {
-        refreshButton.isUserInteractionEnabled = false
-        refreshButton.rotate()
-        webView.reload()
-    }
+//    @objc private func refreshAction() {
+//        refreshButton.isUserInteractionEnabled = false
+//        refreshButton.rotate()
+//        webView.reload()
+//    }
 //
 //    @objc private func forwardAction() {
 //        webView.goForward()
 //    }
+
+    @objc private func appDidBecomeActive() {
+        webView.reload()
+    }
 }
 
 extension ViewController: WKNavigationDelegate {
-    func webView(_: WKWebView, didFinish _: WKNavigation!) {
-        refreshButton.layer.removeAllAnimations()
-        refreshButton.isUserInteractionEnabled = true
-        refreshButton.isHidden = true
-    }
-
-    func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
-        refreshButton.layer.removeAllAnimations()
-        refreshButton.isUserInteractionEnabled = true
-        refreshButton.isHidden = false
-    }
+//    func webView(_: WKWebView, didFinish _: WKNavigation!) {
+//        refreshButton.layer.removeAllAnimations()
+//        refreshButton.isUserInteractionEnabled = true
+//        refreshButton.isHidden = true
+//    }
+//
+//    func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
+//        refreshButton.layer.removeAllAnimations()
+//        refreshButton.isUserInteractionEnabled = true
+//        refreshButton.isHidden = false
+//    }
 
     func webView(_: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 

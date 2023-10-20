@@ -23,64 +23,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9"
+            uuid = "5DFC5DF0-A01F-4EC1-94C9-B0038F9437D2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GotovoApp/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "webView(_:decidePolicyFor:decisionHandler:)"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "refreshAction()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9 - 66c3afb2d0ee65d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GotovoApp.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationAction, decisionHandler: (__C.WKNavigationActionPolicy) -&gt; ()) -&gt; ()"
-                  moduleName = "GotovoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "2504">
-               </Location>
-               <Location
-                  uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9 - 66c3afb2d0ee65d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GotovoApp.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationAction, decisionHandler: (__C.WKNavigationActionPolicy) -&gt; ()) -&gt; ()"
-                  moduleName = "GotovoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "3188">
-               </Location>
-               <Location
-                  uuid = "50B00F76-6C48-44FA-A2D5-769834EB2EC9 - 66c3afb2d0ee65d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GotovoApp.ViewController.webView(_: __C.WKWebView, decidePolicyFor: __C.WKNavigationAction, decisionHandler: (__C.WKNavigationActionPolicy) -&gt; ()) -&gt; ()"
-                  moduleName = "GotovoApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/oleksandrbardashevskyi/Documents/GotovoApp/GotovoApp/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
-                  offsetFromSymbolStart = "2932">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
