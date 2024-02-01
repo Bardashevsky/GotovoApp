@@ -18,5 +18,6 @@ target 'GotovoApp' do
   # Pods for GotovoApp
 
   pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
+  pod 'FirebaseAuth'
 
 end

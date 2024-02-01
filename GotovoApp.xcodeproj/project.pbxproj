@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F12405A29EEB40800098726 /* NBInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F12405929EEB40800098726 /* NBInit.swift */; };
+		4F271AEF2B6BBA1300D18168 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F271AEE2B6BBA1300D18168 /* GoogleService-Info.plist */; };
 		4F304F812A2616E20051CD1F /* svg in Resources */ = {isa = PBXBuildFile; fileRef = 4F304F802A2616E20051CD1F /* svg */; };
 		4F304F832A26182A0051CD1F /* UIImage+SVG+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F304F822A26182A0051CD1F /* UIImage+SVG+Extension.swift */; };
 		4FBA5BE72A14D42200BB188F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA5BE62A14D42200BB188F /* UIView+Extension.swift */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		4F12405929EEB40800098726 /* NBInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBInit.swift; sourceTree = "<group>"; };
+		4F271AED2B6BBA1300D18168 /* GotovoApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = GotovoApp.entitlements; sourceTree = "<group>"; };
+		4F271AEE2B6BBA1300D18168 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F304F7C2A2614BB0051CD1F /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F304F802A2616E20051CD1F /* svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; name = svg; path = GotovoApp/svg; sourceTree = SOURCE_ROOT; };
 		4F304F822A26182A0051CD1F /* UIImage+SVG+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+SVG+Extension.swift"; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		4FE75F7B29E0197B00EED728 /* GotovoApp */ = {
 			isa = PBXGroup;
 			children = (
+				4F271AED2B6BBA1300D18168 /* GotovoApp.entitlements */,
 				4F12405829EEB3FB00098726 /* Extensions */,
 				4FE75F7C29E0197B00EED728 /* AppDelegate.swift */,
 				4FE75F7E29E0197B00EED728 /* SceneDelegate.swift */,
@@ -91,6 +95,7 @@
 				4F304F802A2616E20051CD1F /* svg */,
 				4FE75F8729E0197C00EED728 /* LaunchScreen.storyboard */,
 				4FE75F8A29E0197C00EED728 /* Info.plist */,
+				4F271AEE2B6BBA1300D18168 /* GoogleService-Info.plist */,
 			);
 			path = GotovoApp;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			files = (
 				4F304F812A2616E20051CD1F /* svg in Resources */,
 				4FE75F8929E0197C00EED728 /* LaunchScreen.storyboard in Resources */,
+				4F271AEF2B6BBA1300D18168 /* GoogleService-Info.plist in Resources */,
 				4FE75F8629E0197C00EED728 /* Assets.xcassets in Resources */,
 				4FE75F8429E0197B00EED728 /* Main.storyboard in Resources */,
 			);
@@ -380,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GotovoApp/GotovoApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 14;
@@ -418,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GotovoApp/GotovoApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 14;
