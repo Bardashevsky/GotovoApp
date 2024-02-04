@@ -140,7 +140,7 @@ extension ViewController: WKNavigationDelegate {
 //    }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        let token: String? = Notifications.shared.token
+        let token: String? = Notifications.shared.fcmToken
         if let token {
             let apiKey = "650218ff188b5b0375ba"
             webView.evaluateJavaScript("receiveDeviceToken('\(token)', '\(apiKey)')") { result, error in

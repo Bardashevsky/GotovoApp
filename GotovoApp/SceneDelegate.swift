@@ -53,7 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 import UserNotifications
 
-class Notifications {
+class Notifications: NSObject, UNUserNotificationCenterDelegate {
 
     static let shared = Notifications()
     var token: String? {
@@ -61,6 +61,19 @@ class Notifications {
             UserDefaults.standard.string(forKey: "PushToken")
         } set {
             UserDefaults.standard.set(newValue, forKey: "PushToken")
+        }
+    }
+
+    override init() {
+        super.init()
+        UNUserNotificationCenter.current().delegate = self
+    }
+
+    var fcmToken: String? {
+        get {
+            UserDefaults.standard.string(forKey: "fcmToken")
+        } set {
+            UserDefaults.standard.set(newValue, forKey: "fcmToken")
         }
     }
 
@@ -72,6 +85,11 @@ class Notifications {
             }
         })
         UIApplication.shared.registerForRemoteNotifications()
+    }
+
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.sound, .badge, .alert])
     }
 
 }
