@@ -11,6 +11,7 @@ import WebKit
 class ViewController: UIViewController {
     private let testURL = "https://gotovo-staging.fly.dev/"
     private let test2URL = "https://8858-91-214-138-99.ngrok-free.app/"
+    private let test3URL = "https://test.gotovo.app/"
     private let prodURL = "https://gotovo.app/"
 
     private let webConfiguration = WKWebViewConfiguration() => {
@@ -66,13 +67,14 @@ class ViewController: UIViewController {
 
         setupViews()
 
-        guard let url = URL(string: prodURL) else { return }
+        guard let url = URL(string: test3URL) else { return }
         webView.load(URLRequest(url: url))
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appDidBecomeActive),
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
+        Notifications.shared.register()
     }
 
 
@@ -136,6 +138,16 @@ extension ViewController: WKNavigationDelegate {
 //        refreshButton.isUserInteractionEnabled = true
 //        refreshButton.isHidden = false
 //    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let token: String? = Notifications.shared.token
+        if let token {
+            let apiKey = "650218ff188b5b0375ba"
+            webView.evaluateJavaScript("receiveDeviceToken('\(token)', '\(apiKey)')") { result, error in
+                print("\(String(describing: result)) error = \(String(describing: error))")
+            }
+        }
+    }
 
     func webView(_: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 

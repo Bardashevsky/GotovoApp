@@ -50,3 +50,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+import UserNotifications
+
+class Notifications {
+
+    static let shared = Notifications()
+    var token: String? {
+        get {
+            UserDefaults.standard.string(forKey: "PushToken")
+        } set {
+            UserDefaults.standard.set(newValue, forKey: "PushToken")
+        }
+    }
+
+    func register() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge],
+                                                                completionHandler: { isSuccess, error in
+            if isSuccess {
+
+            }
+        })
+        UIApplication.shared.registerForRemoteNotifications()
+    }
+
+}
