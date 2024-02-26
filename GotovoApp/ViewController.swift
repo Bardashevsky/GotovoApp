@@ -67,7 +67,7 @@ class ViewController: UIViewController {
 
         setupViews()
 
-        guard let url = URL(string: test3URL) else { return }
+        guard let url = URL(string: prodURL) else { return }
         webView.load(URLRequest(url: url))
 
         NotificationCenter.default.addObserver(self,
