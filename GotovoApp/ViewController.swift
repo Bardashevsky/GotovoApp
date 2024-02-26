@@ -122,7 +122,7 @@ class ViewController: UIViewController {
 //    }
 
     @objc private func appDidBecomeActive() {
-        webView.reload()
+//        webView.reload()
     }
 }
 
