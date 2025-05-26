@@ -11,6 +11,8 @@
 		4F271AEF2B6BBA1300D18168 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F271AEE2B6BBA1300D18168 /* GoogleService-Info.plist */; };
 		4F304F812A2616E20051CD1F /* svg in Resources */ = {isa = PBXBuildFile; fileRef = 4F304F802A2616E20051CD1F /* svg */; };
 		4F304F832A26182A0051CD1F /* UIImage+SVG+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F304F822A26182A0051CD1F /* UIImage+SVG+Extension.swift */; };
+		4F6B92A12DE4DCEA00DA1C55 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F6B92A02DE4DCEA00DA1C55 /* SVGKit */; };
+		4F6B92A32DE4DCEA00DA1C55 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F6B92A22DE4DCEA00DA1C55 /* SVGKitSwift */; };
 		4FBA5BE72A14D42200BB188F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA5BE62A14D42200BB188F /* UIView+Extension.swift */; };
 		4FE75F7D29E0197B00EED728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE75F7C29E0197B00EED728 /* AppDelegate.swift */; };
 		4FE75F7F29E0197B00EED728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE75F7E29E0197B00EED728 /* SceneDelegate.swift */; };
@@ -18,15 +20,12 @@
 		4FE75F8429E0197B00EED728 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE75F8229E0197B00EED728 /* Main.storyboard */; };
 		4FE75F8629E0197C00EED728 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE75F8529E0197C00EED728 /* Assets.xcassets */; };
 		4FE75F8929E0197C00EED728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE75F8729E0197C00EED728 /* LaunchScreen.storyboard */; };
-		75405B49EF584088F9C96A49 /* Pods_GotovoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E5D962281910BFC9FC9063 /* Pods_GotovoApp.framework */; };
 		FFA915542B6FEE7200B1BDAF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FFA915532B6FEE7200B1BDAF /* FirebaseAnalytics */; };
 		FFA915602B6FEE7200B1BDAF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FFA9155F2B6FEE7200B1BDAF /* FirebaseAuth */; };
 		FFA9157E2B6FEE7200B1BDAF /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FFA9157D2B6FEE7200B1BDAF /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06E5D962281910BFC9FC9063 /* Pods_GotovoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GotovoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BABB916D9E574E3307F6A9C /* Pods-GotovoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotovoApp.debug.xcconfig"; path = "Target Support Files/Pods-GotovoApp/Pods-GotovoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4F12405929EEB40800098726 /* NBInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBInit.swift; sourceTree = "<group>"; };
 		4F271AED2B6BBA1300D18168 /* GotovoApp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = GotovoApp.entitlements; sourceTree = "<group>"; };
 		4F271AEE2B6BBA1300D18168 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -42,7 +41,6 @@
 		4FE75F8529E0197C00EED728 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FE75F8829E0197C00EED728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FE75F8A29E0197C00EED728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80FE5EB1F1000C9323D28B42 /* Pods-GotovoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotovoApp.release.xcconfig"; path = "Target Support Files/Pods-GotovoApp/Pods-GotovoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6B92A32DE4DCEA00DA1C55 /* SVGKitSwift in Frameworks */,
+				4F6B92A12DE4DCEA00DA1C55 /* SVGKit in Frameworks */,
 				FFA9157E2B6FEE7200B1BDAF /* FirebaseMessaging in Frameworks */,
 				FFA915542B6FEE7200B1BDAF /* FirebaseAnalytics in Frameworks */,
 				FFA915602B6FEE7200B1BDAF /* FirebaseAuth in Frameworks */,
-				75405B49EF584088F9C96A49 /* Pods_GotovoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +74,6 @@
 			children = (
 				4FE75F7B29E0197B00EED728 /* GotovoApp */,
 				4FE75F7A29E0197B00EED728 /* Products */,
-				5F5A0DA3E764C0EE908A6E5F /* Pods */,
 				788E9BD8D08D7F075E2D3BA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -106,20 +104,10 @@
 			path = GotovoApp;
 			sourceTree = "<group>";
 		};
-		5F5A0DA3E764C0EE908A6E5F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3BABB916D9E574E3307F6A9C /* Pods-GotovoApp.debug.xcconfig */,
-				80FE5EB1F1000C9323D28B42 /* Pods-GotovoApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		788E9BD8D08D7F075E2D3BA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4F304F7C2A2614BB0051CD1F /* SVGKit.framework */,
-				06E5D962281910BFC9FC9063 /* Pods_GotovoApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,11 +119,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FE75F8D29E0197C00EED728 /* Build configuration list for PBXNativeTarget "GotovoApp" */;
 			buildPhases = (
-				23C0044FDFECC809BC13349E /* [CP] Check Pods Manifest.lock */,
 				4FE75F7529E0197B00EED728 /* Sources */,
 				4FE75F7629E0197B00EED728 /* Frameworks */,
 				4FE75F7729E0197B00EED728 /* Resources */,
-				703714095556EC89AEE3E75A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +132,8 @@
 				FFA915532B6FEE7200B1BDAF /* FirebaseAnalytics */,
 				FFA9155F2B6FEE7200B1BDAF /* FirebaseAuth */,
 				FFA9157D2B6FEE7200B1BDAF /* FirebaseMessaging */,
+				4F6B92A02DE4DCEA00DA1C55 /* SVGKit */,
+				4F6B92A22DE4DCEA00DA1C55 /* SVGKitSwift */,
 			);
 			productName = GotovoApp;
 			productReference = 4FE75F7929E0197B00EED728 /* GotovoApp.app */;
@@ -177,6 +165,7 @@
 			mainGroup = 4FE75F7029E0197B00EED728;
 			packageReferences = (
 				FFA915522B6FEE7200B1BDAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4F6B929F2DE4DCEA00DA1C55 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 4FE75F7A29E0197B00EED728 /* Products */;
 			projectDirPath = "";
@@ -201,48 +190,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		23C0044FDFECC809BC13349E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GotovoApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		703714095556EC89AEE3E75A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GotovoApp/Pods-GotovoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GotovoApp/Pods-GotovoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GotovoApp/Pods-GotovoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FE75F7529E0197B00EED728 /* Sources */ = {
@@ -396,7 +343,6 @@
 		};
 		4FE75F8E29E0197C00EED728 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BABB916D9E574E3307F6A9C /* Pods-GotovoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bardashevskyi.gotovo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -435,7 +381,6 @@
 		};
 		4FE75F8F29E0197C00EED728 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80FE5EB1F1000C9323D28B42 /* Pods-GotovoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,7 +404,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bardashevskyi.gotovo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -496,6 +441,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4F6B929F2DE4DCEA00DA1C55 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		FFA915522B6FEE7200B1BDAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -507,6 +460,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4F6B92A02DE4DCEA00DA1C55 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F6B929F2DE4DCEA00DA1C55 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		4F6B92A22DE4DCEA00DA1C55 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F6B929F2DE4DCEA00DA1C55 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
 		FFA915532B6FEE7200B1BDAF /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FFA915522B6FEE7200B1BDAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
