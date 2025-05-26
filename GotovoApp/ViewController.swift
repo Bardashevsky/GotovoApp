@@ -127,17 +127,17 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: WKNavigationDelegate {
-//    func webView(_: WKWebView, didFinish _: WKNavigation!) {
-//        refreshButton.layer.removeAllAnimations()
-//        refreshButton.isUserInteractionEnabled = true
-//        refreshButton.isHidden = true
-//    }
-//
-//    func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
-//        refreshButton.layer.removeAllAnimations()
-//        refreshButton.isUserInteractionEnabled = true
-//        refreshButton.isHidden = false
-//    }
+    //    func webView(_: WKWebView, didFinish _: WKNavigation!) {
+    //        refreshButton.layer.removeAllAnimations()
+    //        refreshButton.isUserInteractionEnabled = true
+    //        refreshButton.isHidden = true
+    //    }
+    //
+    //    func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
+    //        refreshButton.layer.removeAllAnimations()
+    //        refreshButton.isUserInteractionEnabled = true
+    //        refreshButton.isHidden = false
+    //    }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         let token: String? = Notifications.shared.fcmToken
@@ -149,16 +149,26 @@ extension ViewController: WKNavigationDelegate {
         }
     }
 
-    func webView(_: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
-        guard let url = navigationAction.request.url else { return }
-
-        if url.scheme == "tel" {
-            UIApplication.shared.open(url)
+        guard let url = navigationAction.request.url else {
+            decisionHandler(.allow)
+            return
         }
 
-        if url.absoluteString.range(of: "instagram") != nil || url.absoluteString.range(of: "facebook") != nil {
-            UIApplication.shared.open(url)
+        let urlString = url.absoluteString
+
+        if url.scheme == "tel" ||
+            url.scheme == "geo" ||
+            url.scheme == "comgooglemaps" ||
+            url.scheme == "waze" ||
+            urlString.contains("instagram") ||
+            urlString.contains("google.com/maps") ||
+            urlString.contains("facebook") ||
+            urlString.contains("monobank")
+        {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            return
         }
 
         decisionHandler(.allow)
