@@ -150,28 +150,27 @@ extension ViewController: WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-
         guard let url = navigationAction.request.url else {
-            decisionHandler(.allow)
+            decisionHandler(.allow) // Always call handler before returning
             return
         }
 
         let urlString = url.absoluteString
 
-        if url.scheme == "tel" ||
-            url.scheme == "geo" ||
-            url.scheme == "comgooglemaps" ||
-            url.scheme == "waze" ||
-            urlString.contains("instagram") ||
-            urlString.contains("google.com/maps") ||
-            urlString.contains("facebook") ||
-            urlString.contains("monobank")
-        {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        // List of URL patterns that should open externally
+        let externalURLPatterns = [
+            "tel:", "geo:", "comgooglemaps:", "waze:",
+            "instagram", "google.com/maps", "facebook", "monobank"
+        ]
+
+        if externalURLPatterns.contains(where: urlString.contains) {
+            UIApplication.shared.open(url, options: [:]) { success in
+                decisionHandler(success ? .cancel : .allow)
+            }
             return
         }
 
-        decisionHandler(.allow)
+        decisionHandler(.allow) // Default case - allow the navigation
     }
 }
 
